@@ -38,7 +38,7 @@ export function Hero() {
 
         {/* Main Title */}
         <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-dark-text mb-6 animate-fade-in opacity-0" style={{ animationDelay: '0.4s' }}>
-           <span className="dark-text">Luana</span> <span className="text-champagne">&</span> <span className="dark-text">Adailton</span>
+           <span className="text-dark-text">Luana</span> <span className="text-champagne">&</span> <span className="text-dark-text">Adailton</span>
         </h1>
 
         {/* Description */}
