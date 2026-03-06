@@ -25,7 +25,7 @@ export function Hero() {
         {/* Monograma */}
         <div className="animate-scale-in mb-8">
           <img 
-            src="/monograma.png" 
+            src="/Convite Lua e Dal.svg" 
             alt="Luana & Adailton Monograma"
             className="w-48 h-48 md:w-64 md:h-64 object-contain"
           />
