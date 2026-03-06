@@ -27,7 +27,7 @@ export function Hero() {
           <img 
             src="/Convite Lua e Dal.svg" 
             alt="Luana & Adailton Monograma"
-            className="w-80 h-80 md:w-64 md:h-64 object-contain"
+            className="w-[256] h-[256] md:w-64 md:h-64 object-contain"
           />
         </div>
 
