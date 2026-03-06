@@ -16,7 +16,7 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-2 8-12 12-12 20s8 12 12 20c2-8 12-12 12-20s-8-12-12-20z' fill='%238B9A7D' fill-opacity='0.3'/%3E%3C/svg%3E")`,
-            backgroundSize: '80px 80px'
+            backgroundSize: '180px 180px'
           }}
         />
       </div>
@@ -27,7 +27,7 @@ export function Hero() {
           <img 
             src="/Convite Lua e Dal.svg" 
             alt="Luana & Adailton Monograma"
-            className="w-60 h-60 md:w-76 md:h-76 object-contain"
+            className="w-48 h-48 md:w-64 md:h-64 object-contain"
           />
         </div>
 
