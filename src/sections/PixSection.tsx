@@ -52,11 +52,11 @@ export function PixSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="font-script text-5xl md:text-6xl text-dark-text mb-4">
-            Presenteie com PIX
+            Presenteie com <span className="font-serif">PIX</span>
           </h2>
           <p className="font-serif text-lg text-light-text italic max-w-2xl mx-auto">
-            Escolha um presente da lista e faça o PIX no valor correspondente. 
-            Sua contribuição será muito especial para nós!
+            Escolha um item da lista e faça o PIX no valor correspondente. 
+            Seu presente será muito especial para nós!
           </p>
         </div>
 
