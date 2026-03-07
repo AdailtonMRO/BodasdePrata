@@ -42,7 +42,7 @@ function EventCard({ icon, title, location, address, time, mapsUrl, delay, isVis
         
         <div className="flex items-center gap-2 text-dark-text mb-6">
           <Clock className="w-4 h-4" />
-          <span className="font-sans text-sm uppercase tracking-wider">{time}</span>
+          <span className="font-sans text-sm uppercase tracking-wider font-bold">{time}</span>
         </div>
         
         <Button

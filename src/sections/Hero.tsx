@@ -72,7 +72,7 @@ export function Hero() {
         style={{ animationDelay: '1s' }}
         aria-label="Rolar para conteúdo"
       >
-        <span className="font-sans text-xs uppercase tracking-widest">Role para baixo</span>
+        <span className="font-sans text-xs uppercase tracking-widest font-bold">Role para baixo</span>
         <ChevronDown className="w-6 h-6 animate-bounce-soft" />
       </button>
     </section>
