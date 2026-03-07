@@ -69,7 +69,7 @@ export function PixSection() {
 
             {/* Title */}
             <h3 className="font-script text-3xl md:text-4xl text-dark-text mb-6">
-              Chave PIX
+              Chave <span className="font-serif">PIX</span>
             </h3>
 
             {/* PIX Key */}

@@ -46,7 +46,7 @@ export function Hero() {
           Convidam para a comemoração de suas
         </p>
 
-        <h2 className="font-script text-4xl md:text-5xl text-olive mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
+        <h2 className="font-script text-4xl md:text-5xl text-[#737373] mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
           Bodas de Prata
         </h2>
 
