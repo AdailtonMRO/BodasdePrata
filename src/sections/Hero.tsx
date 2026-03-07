@@ -27,7 +27,7 @@ export function Hero() {
           <img 
             src="Monograma.png" 
             alt="Luana & Adailton Monograma"
-            className="w-[256px] h-[256px] object-contain"
+            className="w-[128] h-[128] object-contain"
           />
         </div>
 
