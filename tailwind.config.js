@@ -15,6 +15,7 @@ module.exports = {
         cream: "#F8F6F3",
         "dark-text": "#2C2C2C",
         "light-text": "#4A4A4A",
+        verde: "#77856b",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -56,6 +57,7 @@ module.exports = {
       },
       fontFamily: {
         script: ['Great Vibes', 'cursive'],
+        nome: ['Parisienne', 'sans-serif'],
         serif: ['Cormorant Garamond', 'serif'],
         sans: ['Montserrat', 'sans-serif'],
       },
