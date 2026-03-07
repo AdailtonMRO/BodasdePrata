@@ -131,7 +131,7 @@ export function RSVP() {
           </h2>
           <div className="flex items-center justify-center gap-3 text-olive">
             <Calendar className="w-5 h-5" />
-            <p className="font-sans text-sm uppercase tracking-wider">
+            <p className="font-sans text-sm uppercase tracking-wider font-bold">
               Data limite: 15 de Abril de 2026
             </p>
           </div>
