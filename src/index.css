@@ -58,7 +58,11 @@
   .font-script {
     font-family: "Great Vibes", cursive;
   }
-  
+
+  .font-nome {
+    font-family: "Parisienne", cursive;
+  }
+
   .font-serif {
     font-family: 'Cormorant Garamond', serif;
   }
