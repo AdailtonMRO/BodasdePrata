@@ -93,7 +93,7 @@ export function Countdown() {
         <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-flex items-center gap-4">
             <div className="h-px w-12 bg-champagne" />
-            <p className="font-script text-2xl md:text-3xl text-olive">
+            <p className="font-script text-2xl md:text-3xl text-olive font-bold">
               09 de Maio de 2026
             </p>
             <div className="h-px w-12 bg-champagne" />

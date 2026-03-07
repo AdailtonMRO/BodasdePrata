@@ -93,7 +93,7 @@ export function EventInfo() {
     {
       icon: <Wine className="w-8 h-8" />,
       title: 'Festa',
-      location: 'Clube Alphaville PE2',
+      location: 'Salão de Festa Alphaville PE2',
       address: 'Rodovia BR 232, km 17,1, Vargem Fria, Jaboatão dos Guararapes - PE, 54125-010',
       time: 'Após a cerimônia.',
       mapsUrl: 'https://waze.com/ul?q=Clube%20Alphaville%20PE2%2C%20Jaboat%C3%A3o%20dos%20Guararapes%2C%20PE',
