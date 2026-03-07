@@ -25,7 +25,7 @@ export function Hero() {
         {/* Monograma */}
         <div className="animate-scale-in mb-8">
           <img 
-            src="/Monograma.png" 
+            src="Monograma.png" 
             alt="Luana & Adailton Monograma"
             className="w-[180px] h-[180px] object-contain"
           />

@@ -34,7 +34,7 @@ export function Footer() {
           </div>
 
           {/* Names */}
-          <h3 className="font-script text-3xl md:text-4xl text-white mb-2">
+          <h3 className="font-nome text-3xl md:text-4xl text-white mb-2">
             Luana & Adailton
           </h3>
 
