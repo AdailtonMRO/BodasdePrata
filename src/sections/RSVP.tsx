@@ -53,35 +53,37 @@ export function RSVP() {
 
     setIsSubmitting(true);
 
-    // Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDBzAo_E1_c7r5XxjDq2ljm3aIR94cZc5beyaV2XlDriHsPx8DEwp5JSIwqtsNxWepRQ/exec'
+    // URL do seu Web App (certifique-se de que é a URL da "Nova Implantação")
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzVyzfz1J6Ik2SRNdcczKX2dinfvs29nSpeCw-mWzHbhrvyqzJLsz787Oyuxo4l99bWRA/exec';
       
-     
     try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      // Usamos URLSearchParams para evitar problemas de CORS com o Google Script
+      const params = new URLSearchParams();
+      params.append('name', formData.name);
+      params.append('email', formData.email);
+      params.append('phone', formData.phone);
+      params.append('attending', formData.attending === 'sim' ? 'Sim' : 'Não');
+      params.append('bringingGuest', formData.bringingGuest === 'sim' ? 'Sim' : 'Não');
+      params.append('guestName', formData.guestName || '-');
+      params.append('timestamp', new Date().toLocaleString('pt-BR'));
+
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors', // Fundamental para o Google Apps Script
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          attending: formData.attending === 'sim' ? 'Sim' : 'Não',
-          bringingGuest: formData.bringingGuest === 'sim' ? 'Sim' : 'Não',
-          guestName: formData.guestName || '-',
-          timestamp: new Date().toISOString(),
-        }),
+        body: params.toString(),
       });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        toast.success('Presença confirmada com sucesso!');
-      } else {
-        throw new Error('Erro na resposta');
-      }
+      // Com mode: 'no-cors', o fetch não retorna 'ok', então assumimos sucesso se não houver erro
+      setIsSubmitted(true);
+      toast.success('Presença confirmada com sucesso!');
+
     } catch (error) {
-      // Fallback: salvar no localStorage e mostrar mensagem de sucesso
+      console.error('Erro ao enviar:', error);
+      
+      // Fallback para LocalStorage caso falhe
       const savedRSVPs = JSON.parse(localStorage.getItem('rsvps') || '[]');
       savedRSVPs.push({
         ...formData,
@@ -90,7 +92,7 @@ export function RSVP() {
       localStorage.setItem('rsvps', JSON.stringify(savedRSVPs));
       
       setIsSubmitted(true);
-      toast.success('Presença confirmada! (Salvo localmente)');
+      toast.success('Presença confirmada! (Salvo offline)');
     } finally {
       setIsSubmitting(false);
     }
@@ -140,7 +142,6 @@ export function RSVP() {
           className={`bg-white p-8 md:p-12 shadow-elegant transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <div className="space-y-6">
-            {/* Name */}
             <div className="space-y-2">
               <Label htmlFor="name" className="font-sans text-sm uppercase tracking-wider text-light-text flex items-center gap-2">
                 <User className="w-4 h-4" />
@@ -157,7 +158,6 @@ export function RSVP() {
               />
             </div>
 
-            {/* Email */}
             <div className="space-y-2">
               <Label htmlFor="email" className="font-sans text-sm uppercase tracking-wider text-light-text flex items-center gap-2">
                 <Mail className="w-4 h-4" />
@@ -173,7 +173,6 @@ export function RSVP() {
               />
             </div>
 
-            {/* Phone */}
             <div className="space-y-2">
               <Label htmlFor="phone" className="font-sans text-sm uppercase tracking-wider text-light-text flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -189,7 +188,6 @@ export function RSVP() {
               />
             </div>
 
-            {/* Attending */}
             <div className="space-y-3">
               <Label className="font-sans text-sm uppercase tracking-wider text-light-text flex items-center gap-2">
                 <Check className="w-4 h-4" />
@@ -211,7 +209,6 @@ export function RSVP() {
               </RadioGroup>
             </div>
 
-            {/* Guest (only if attending) */}
             {formData.attending === 'sim' && (
               <div className="space-y-6 animate-fade-in">
                 <div className="space-y-3">
@@ -253,7 +250,6 @@ export function RSVP() {
               </div>
             )}
 
-            {/* Submit */}
             <Button
               type="submit"
               disabled={isSubmitting}
