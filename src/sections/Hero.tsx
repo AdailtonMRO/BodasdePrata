@@ -27,7 +27,7 @@ export function Hero() {
           <img 
             src="Monograma.png" 
             alt="Luana & Adailton Monograma"
-            className="w-[180px] h-[180px] object-contain"
+            className="w-[180] h-[180] object-contain"
           />
         </div>
 
@@ -38,7 +38,7 @@ export function Hero() {
 
         {/* Main Title */}
         <h1 className="font-script text-5xl md:text-7xl lg:text-8xl text-dark-text mb-6 animate-fade-in opacity-0" style={{ animationDelay: '0.4s' }}>
-           <span className="font-nome text-olive">Luana</span> <span className="text-champagne">&</span>  <span className="font-nome text-olive">Adailton</span>
+           <span className="font-nome text-verde-text">Luana</span> <span className="text-champagne">&</span>  <span className="font-nome text-verde-text">Adailton</span>
         </h1>
 
         {/* Description */}
