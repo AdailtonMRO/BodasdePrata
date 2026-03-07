@@ -54,7 +54,7 @@ export function RSVP() {
     setIsSubmitting(true);
 
     // Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3eAC5Wr72Ub_PSfCfQAne-6QAP0hXlDTvZHXDGI5n/dev'
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDBzAo_E1_c7r5XxjDq2ljm3aIR94cZc5beyaV2XlDriHsPx8DEwp5JSIwqtsNxWepRQ/exec'
       
      
     try {
