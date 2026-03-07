@@ -54,7 +54,7 @@ export function RSVP() {
     setIsSubmitting(true);
 
     // URL do seu Web App (certifique-se de que é a URL da "Nova Implantação")
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzVyzfz1J6Ik2SRNdcczKX2dinfvs29nSpeCw-mWzHbhrvyqzJLsz787Oyuxo4l99bWRA/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw08mgOasybmMiJHbNBGBNQiw43ddtB0zRYHR55JIdD3xrO10UgS2vGlCOoGdEWAN-VaQ/exec';
       
     try {
       // Usamos URLSearchParams para evitar problemas de CORS com o Google Script
