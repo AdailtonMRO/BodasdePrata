@@ -27,7 +27,7 @@ export function Hero() {
           <img 
             src="Monograma.png" 
             alt="Luana & Adailton Monograma"
-            className="w-[180] h-[180] object-contain"
+            className="w-[256px] h-[256px] object-contain"
           />
         </div>
 
@@ -38,7 +38,7 @@ export function Hero() {
 
         {/* Main Title */}
         <h1 className="font-script text-5xl md:text-7xl lg:text-8xl text-dark-text mb-6 animate-fade-in opacity-0" style={{ animationDelay: '0.4s' }}>
-           <span className="font-nome text-verde-text">Luana</span> <span className="text-champagne">&</span>  <span className="font-nome text-verde-text">Adailton</span>
+           <span className="font-nome text-verde">Luana</span> <span className="text-champagne">&</span>  <span className="font-nome text-verde">Adailton</span>
         </h1>
 
         {/* Description */}
@@ -68,7 +68,7 @@ export function Hero() {
       {/* Scroll indicator */}
       <button 
         onClick={scrollToContent}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-champagne hover:text-olive transition-colors cursor-pointer animate-fade-in opacity-0"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-verde hover:text-champagne transition-colors cursor-pointer animate-fade-in opacity-0"
         style={{ animationDelay: '1s' }}
         aria-label="Rolar para conteúdo"
       >
