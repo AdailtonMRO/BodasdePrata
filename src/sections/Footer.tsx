@@ -28,7 +28,7 @@ export function Footer() {
         <div className={`flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Monogram */}
           <div className="mb-8">
-            <span className="font-script text-6xl md:text-7xl text-champagne">
+            <span className="font-nome text-6xl md:text-7xl text-champagne">
               L<span className="text-white">&</span>A
             </span>
           </div>
