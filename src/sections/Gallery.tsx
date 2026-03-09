@@ -24,14 +24,14 @@ export function Gallery() {
 
   // Placeholder photos - these will be replaced with actual photos
   const photos = [
-    { id: 1, label: 'Foto 1',src:'/01.jpg'  },
-    { id: 2, label: 'Foto 2',src:'/04.jpg'  },
-    { id: 3, label: 'Foto 3',src:'/07.jpg'  },
-    { id: 4, label: 'Foto 4',src:'/08.jpg'  },
-    { id: 5, label: 'Foto 5',src:'/10.jpg'  },
-    { id: 6, label: 'Foto 6',src:'/13.jpg'  },
-    { id: 7, label: 'Foto 7',src:'/20.jpg'  },
-    { id: 8, label: 'Foto 8',src:'/25.jpg'  },
+    { id: 1, label: 'Foto 1',src:'01.jpg'  },
+    { id: 2, label: 'Foto 2',src:'04.jpg'  },
+    { id: 3, label: 'Foto 3',src:'07.jpg'  },
+    { id: 4, label: 'Foto 4',src:'08.jpg'  },
+    { id: 5, label: 'Foto 5',src:'10.jpg'  },
+    { id: 6, label: 'Foto 6',src:'13.jpg'  },
+    { id: 7, label: 'Foto 7',src:'20.jpg'  },
+    { id: 8, label: 'Foto 8',src:'25.jpg'  },
     { id: 9, label: 'Foto 9' },
     { id: 10, label: 'Foto 10' },
     { id: 11, label: 'Foto 11' },
