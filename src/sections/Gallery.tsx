@@ -25,30 +25,11 @@ export function Gallery() {
   // Placeholder photos - these will be replaced with actual photos
   const photos = [
     { id: 1, label: 'Foto 1',src:'01.jpg'  },
-    { id: 2, label: 'Foto 2',src:'04.jpg'  },
-    { id: 3, label: 'Foto 3',src:'07.jpg'  },
-    { id: 4, label: 'Foto 4',src:'08.jpg'  },
-    { id: 5, label: 'Foto 5',src:'10.jpg'  },
-    { id: 6, label: 'Foto 6',src:'13.jpg'  },
-    { id: 7, label: 'Foto 7',src:'20.jpg'  },
-    { id: 8, label: 'Foto 8',src:'25.jpg'  },
-    { id: 9, label: 'Foto 9' },
-    { id: 10, label: 'Foto 10' },
-    { id: 11, label: 'Foto 11' },
-    { id: 12, label: 'Foto 12' },
-    { id: 13, label: 'Foto 13' },
-    { id: 14, label: 'Foto 14' },
-    { id: 15, label: 'Foto 15' },
-    { id: 16, label: 'Foto 16' },
-    { id: 17, label: 'Foto 17' },
-    { id: 18, label: 'Foto 18' },
-    { id: 19, label: 'Foto 19' },
-    { id: 20, label: 'Foto 20' },
-    { id: 21, label: 'Foto 21' },
-    { id: 22, label: 'Foto 22' },
-    { id: 23, label: 'Foto 23' },
-    { id: 24, label: 'Foto 24' },
-    { id: 25, label: 'Foto 25' },
+    { id: 2, label: 'Foto 2',src:'10.jpg'  },
+    { id: 3, label: 'Foto 3',src:'101.jpg'  },
+    { id: 4, label: 'Foto 4',src:'20.jpg'  },
+    { id: 5, label: 'Foto 5',src:'25.jpg'  },
+    
   ];
 
   return (
