@@ -31,7 +31,7 @@ export function Hero() {
     <>
       {/* Música */}
       <audio ref={audioRef} loop>
-        <source src="/heaven.mp3" type="audio/mpeg" />
+        <source src="allofme.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Botão da música */}
