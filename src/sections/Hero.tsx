@@ -9,6 +9,7 @@ export function Hero() {
   };
 
   return (
+    <audio src="heaven.mp3" autoplay loop></audio>
     <section className="min-h-screen flex flex-col items-center justify-center relative bg-cream px-4 py-16">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
