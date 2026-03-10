@@ -3,21 +3,22 @@ import { ChevronDown } from 'lucide-react';
 
 export function Hero() {
 
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
 
   const toggleMusic = () => {
-    if (!audioRef.current) return;
+  const audio = audioRef.current;
+  if (!audio) return;
 
-    if (playing) {
-      audioRef.current.pause();
-      setPlaying(false);
-    } else {
-      audioRef.current.volume = 0.3; // volume suave
-      audioRef.current.play();
-      setPlaying(true);
-    }
-  };
+  if (playing) {
+    audio.pause();
+    setPlaying(false);
+  } else {
+    audio.volume = 0.3;
+    audio.play();
+    setPlaying(true);
+  }
+};
 
   const scrollToContent = () => {
     const element = document.getElementById('contagem');
