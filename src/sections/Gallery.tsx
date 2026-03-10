@@ -29,7 +29,7 @@ export function Gallery() {
     { id: 3, label: 'Foto 3',src:'101.jpg'  },
     { id: 4, label: 'Foto 4',src:'20.jpg'  },
     { id: 5, label: 'Foto 5',src:'25.jpg'  },
-    { id: 5, label: 'Foto 6',src:'Monograma.jpg'  }       
+    { id: 5, label: 'Foto 6',src:'Monograma.png'  }       
   ];
 
   return (
