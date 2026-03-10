@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Calendar, Check, User, Mail, Users, Heart } from 'lucide-react';
+import { Calendar, Check, User, Phone, Users, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -13,7 +13,7 @@ export function RSVP() {
   
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    phone: '',
     identity: '',
     attending: '',
     bringingGuest: '',
@@ -55,13 +55,13 @@ export function RSVP() {
     setIsSubmitting(true);
 
     // URL do seu Web App (certifique-se de que é a URL da "Nova Implantação")
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwuUszRacpGHOfDbVYKnWVcT4kDJvaa3OQjkwLU7hm2zMQD6lGiY4M5wEMjh7wRY_iD9Q/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1Nq8ojiaXHVjzPyLrQUP1A0s2rbjzoY-NyA9_OEBoonzrTGubbaHfDvhyria8zM_3Kg/exec';
       
     try {
       // Usamos URLSearchParams para evitar problemas de CORS com o Google Script
       const params = new URLSearchParams();
       params.append('name', formData.name);
-      params.append('email', formData.email);
+      params.append('phone', formData.phone);
       params.append('identity', formData.identity);
       params.append('attending', formData.attending === 'sim' ? 'Sim' : 'Não');
       params.append('bringingGuest', formData.bringingGuest === 'sim' ? 'Sim' : 'Não');
@@ -161,17 +161,17 @@ export function RSVP() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email" className="font-sans text-sm uppercase tracking-wider text-light-text flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                E-mail
+              <Label htmlFor="phone" className="font-sans text-sm uppercase tracking-wider text-light-text flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                Telefone
               </Label>
               <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) => handleInputChange('email', e.target.value)}
+                id="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => handleInputChange('phone', e.target.value)}
                 className="rounded-none border-gray-200 focus:border-champagne focus:ring-champagne font-serif text-lg py-6"
-                placeholder="seu@email.com"
+                placeholder="(00) 00000-0000"
               />
             </div>
 
