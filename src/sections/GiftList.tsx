@@ -154,8 +154,10 @@ export function GiftList() {
             Lista de Presentes
           </h2>
           <p className="font-serif text-lg text-light-text italic max-w-2xl mx-auto">
-            Sua presença é o melhor presente, mas se desejar nos presentear, 
-            preparamos uma lista criativa com sugestões especiais
+            Sua presença é o melhor presente, mas se desejar nos presentear  
+            transforme seu carinho em solidariedade: o valor dos presentes 
+            da lista será doado a uma causa especial, enquanto nós realizaremos
+             o desejo escolhido para celebrar nossa união.
           </p>
         </div>
 
