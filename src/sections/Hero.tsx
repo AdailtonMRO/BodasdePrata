@@ -58,18 +58,18 @@ export function Hero() {
         <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
 
           {/* Monograma */}
-          <div className="animate-scale-in mb-8">
+          <div className="animate-scale-in mb-4">
             <img
               src="Monograma.png"
               alt="Luana & Adailton Monograma"
               className="w-[128] h-[128] object-contain"
             />
           </div>
-          <h2 className="font-script text-4xl md:text-5xl text-[#737373] mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
+          <h2 className="font-script text-4xl md:text-5xl text-[#737373] mb-0 animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
             Bodas de Prata
           </h2>
           {/* Subtitle */}
-          <p className="font-serif text-lg md:text-xl text-light-text italic mb-4 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
+          <p className="font-serif text-lg md:text-xl text-light-text italic mb-10 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
             Vinte e cinco anos de cumplicidade
           </p>
 
@@ -81,7 +81,7 @@ export function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="font-serif text-xl md:text-2xl text-light-text mb-4 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
+          <p className="font-serif text-2xl md:text-3xl text-light-text my-12 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
             Convidam para a cerimônia de renovação de votos
           </p>
 
