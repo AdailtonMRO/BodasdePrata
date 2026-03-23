@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Gift, Heart, Coffee, Wine, BookOpen, Sun, Utensils, Home, Star, Plane, Music, Sparkles, Gamepad2 } from 'lucide-react';
+import { Gift, Heart, Coffee, Wine, BookOpen, Sun, Utensils, Home, Star, Plane, Music, Sparkles, Gamepad2, Copy, Check } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface GiftItem {
   id: number;
@@ -12,6 +13,10 @@ interface GiftItem {
 export function GiftList() {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedGift, setSelectedGift] = useState<GiftItem | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const pixKey = 'adailton.medeiros@gmail.com';
+  const accountName = 'Adailton Medeiros Rodrigues de Oliveira';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,6 +35,25 @@ export function GiftList() {
 
     return () => observer.disconnect();
   }, []);
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(pixKey);
+      setCopied(true);
+      toast.success('Chave PIX copiada!');
+      setTimeout(() => setCopied(false), 3000);
+    } catch (err) {
+      const textArea = document.createElement('textarea');
+      textArea.value = pixKey;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      toast.success('Chave PIX copiada!');
+      setTimeout(() => setCopied(false), 3000);
+    }
+  };
 
   const gifts: GiftItem[] = [
     {
@@ -140,7 +164,7 @@ export function GiftList() {
   ];
 
   const scrollToPix = () => {
-    const element = document.getElementById('pix');
+    const element = document.getElementById('pix-key-section');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -161,7 +185,7 @@ export function GiftList() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
           {gifts.map((gift, index) => (
             <div
               key={gift.id}
@@ -194,15 +218,53 @@ export function GiftList() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <button
-            onClick={scrollToPix}
-            className="inline-flex items-center gap-2 bg-champagne hover:bg-[#B8A796] text-white px-8 py-4 font-sans text-sm uppercase tracking-wider transition-all duration-300 hover:scale-[1.02]"
-          >
-            <Gift className="w-5 h-5" />
-            Quero Presentear
-          </button>
+        {/* PIX Details Area */}
+        <div id="pix-key-section" className={`max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-elegant transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-olive rounded-full flex items-center justify-center mb-6 animate-pulse-soft">
+              <Gift className="w-8 h-8 text-white" />
+            </div>
+
+            <h3 className="font-script text-3xl md:text-4xl text-dark-text mb-6">
+              Presenteie com <span className="font-serif">PIX</span>
+            </h3>
+            
+            <p className="font-serif text-lg text-light-text italic mb-8 max-w-lg">
+              Escolha um item da lista e faça o PIX no valor correspondente. 
+              Seu carinho será transformado em solidariedade!
+            </p>
+
+            <div className="bg-cream p-6 md:p-8 w-full max-w-lg mb-6 shadow-sm border border-gray-100">
+              <div className="flex items-center justify-between gap-4">
+                <div className="text-left">
+                  <p className="font-sans text-xs uppercase tracking-wider text-light-text mb-1">
+                    Chave E-mail
+                  </p>
+                  <p className="font-serif text-lg md:text-xl text-dark-text break-all">
+                    {pixKey}
+                  </p>
+                </div>
+                <button
+                  onClick={copyToClipboard}
+                  className="flex-shrink-0 w-12 h-12 bg-champagne hover:bg-[#B8A796] text-white flex items-center justify-center transition-all duration-300 hover:scale-105"
+                  aria-label="Copiar chave PIX"
+                >
+                  {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                </button>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <p className="font-sans text-xs uppercase tracking-wider text-light-text mb-1">
+                Nome
+              </p>
+              <p className="font-serif text-lg text-dark-text">
+                {accountName}
+              </p>
+            </div>
+
+            <div className="w-24 h-px bg-champagne" />
+          </div>
         </div>
 
         {/* Selected Gift Modal */}

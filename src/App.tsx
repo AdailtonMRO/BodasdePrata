@@ -4,7 +4,6 @@ import { Countdown } from './sections/Countdown';
 import { EventInfo } from './sections/EventInfo';
 import { RSVP } from './sections/RSVP';
 import { GiftList } from './sections/GiftList';
-import { PixSection } from './sections/PixSection';
 import { Gallery } from './sections/Gallery';
 import { Footer } from './sections/Footer';
 
@@ -26,7 +25,6 @@ function App() {
       <EventInfo />
       <RSVP />
       <GiftList />
-      <PixSection />
       <Gallery />
       <Footer />
     </main>
