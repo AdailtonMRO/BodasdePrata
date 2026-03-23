@@ -65,7 +65,9 @@ export function Hero() {
               className="w-[128] h-[128] object-contain"
             />
           </div>
-
+          <h2 className="font-script text-4xl md:text-5xl text-[#737373] mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
+            Bodas de Prata
+          </h2>
           {/* Subtitle */}
           <p className="font-serif text-lg md:text-xl text-light-text italic mb-4 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
             Vinte e cinco anos de cumplicidade
@@ -83,9 +85,7 @@ export function Hero() {
             Convidam para a cerimônia de renovação de votos
           </p>
 
-          <h2 className="font-script text-4xl md:text-5xl text-[#737373] mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
-            Bodas de Prata
-          </h2>
+
 
           {/* Date */}
           <div className="flex items-center gap-4 animate-fade-in opacity-0" style={{ animationDelay: '0.7s' }}>
