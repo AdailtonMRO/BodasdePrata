@@ -54,9 +54,9 @@ export function GiftList() {
             Lista de Presentes
           </h2>
           <p className="font-serif text-lg text-light-text italic max-w-2xl mx-auto">
-            Sua presença é o melhor presente, mas se desejar nos presentear, 
+            <strong>Sua presença é o melhor presente, mas se desejar nos presentear, 
             seu carinho será transformado em solidariedade: as contribuições 
-            serão doadas a uma causa especial.
+            serão doadas a uma causa especial.</strong>
           </p>
         </div>
 
@@ -72,8 +72,8 @@ export function GiftList() {
             </h3>
             
             <p className="font-serif text-lg text-light-text italic mb-8 max-w-lg">
-              Qualquer valor será recebido com muita gratidão e 
-              destinado integralmente a quem mais precisa.
+              <strong>Qualquer valor será recebido com muita gratidão e 
+              destinado integralmente a quem mais precisa.</strong>
             </p>
 
             <div className="bg-cream p-6 md:p-8 w-full max-w-lg mb-6 shadow-sm border border-gray-100">

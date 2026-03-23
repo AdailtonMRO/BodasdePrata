@@ -7,18 +7,18 @@ export function Hero() {
   const [playing, setPlaying] = useState(false);
 
   const toggleMusic = () => {
-  const audio = audioRef.current;
-  if (!audio) return;
+    const audio = audioRef.current;
+    if (!audio) return;
 
-  if (playing) {
-    audio.pause();
-    setPlaying(false);
-  } else {
-    audio.volume = 0.3;
-    audio.play();
-    setPlaying(true);
-  }
-};
+    if (playing) {
+      audio.pause();
+      setPlaying(false);
+    } else {
+      audio.volume = 0.3;
+      audio.play();
+      setPlaying(true);
+    }
+  };
 
   const scrollToContent = () => {
     const element = document.getElementById('contagem');
@@ -80,7 +80,7 @@ export function Hero() {
 
           {/* Description */}
           <p className="font-serif text-xl md:text-2xl text-light-text mb-4 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
-            Convidam para a comemoração de suas
+            Convidam para a cerimônia de renovação de votos
           </p>
 
           <h2 className="font-script text-4xl md:text-5xl text-[#737373] mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.6s' }}>
