@@ -10,7 +10,7 @@ export function RSVP() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -41,7 +41,7 @@ export function RSVP() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.attending) {
       toast.error('Por favor, preencha os campos obrigatórios');
       return;
@@ -55,7 +55,7 @@ export function RSVP() {
     setIsSubmitting(true);
 
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1Nq8ojiaXHVjzPyLrQUP1A0s2rbjzoY-NyA9_OEBoonzrTGubbaHfDvhyria8zM_3Kg/exec';
-      
+
     try {
       const params = new URLSearchParams();
       params.append('name', formData.name);
@@ -66,7 +66,7 @@ export function RSVP() {
       params.append('guestName', formData.guestName || '-');
       params.append('guestIdentity', formData.guestIdentity || '-');
       params.append('timestamp', new Date().toLocaleString('pt-BR'));
-      
+
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
@@ -81,14 +81,14 @@ export function RSVP() {
 
     } catch (error) {
       console.error('Erro ao enviar:', error);
-      
+
       const savedRSVPs = JSON.parse(localStorage.getItem('rsvps') || '[]');
       savedRSVPs.push({
         ...formData,
         timestamp: new Date().toISOString(),
       });
       localStorage.setItem('rsvps', JSON.stringify(savedRSVPs));
-      
+
       setIsSubmitted(true);
       toast.success('Presença confirmada! (Salvo offline)');
     } finally {
@@ -135,7 +135,7 @@ export function RSVP() {
           </div>
         </div>
 
-        <form 
+        <form
           onSubmit={handleSubmit}
           className={`bg-white p-8 md:p-12 shadow-elegant transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
@@ -235,45 +235,45 @@ export function RSVP() {
                   </RadioGroup>
                 </div>
 
-               {formData.bringingGuest === 'sim' && (
-                <div className="space-y-6 animate-fade-in">
+                {formData.bringingGuest === 'sim' && (
+                  <div className="space-y-6 animate-fade-in">
 
-                  <div className="space-y-2">
-                    <Label htmlFor="guestName" className="font-sans text-sm uppercase tracking-wider text-light-text">
-                      Nome do Acompanhante
-                    </Label>
+                    <div className="space-y-2">
+                      <Label htmlFor="guestName" className="font-sans text-sm uppercase tracking-wider text-light-text">
+                        Nome do Acompanhante
+                      </Label>
 
-                    <Input
-                      id="guestName"
-                      type="text"
-                      value={formData.guestName}
-                      onChange={(e) => handleInputChange('guestName', e.target.value)}
-                      className="rounded-none border-gray-200 focus:border-champagne focus:ring-champagne font-serif text-lg py-6"
-                      placeholder="Nome completo do acompanhante"
-                    />
+                      <Input
+                        id="guestName"
+                        type="text"
+                        value={formData.guestName}
+                        onChange={(e) => handleInputChange('guestName', e.target.value)}
+                        className="rounded-none border-gray-200 focus:border-champagne focus:ring-champagne font-serif text-lg py-6"
+                        placeholder="Nome completo do acompanhante"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="guestIdentity" className="font-sans text-sm uppercase tracking-wider text-light-text">
+                        Número da Identidade do Acompanhante
+                      </Label>
+
+                      <Input
+                        id="guestIdentity"
+                        type="text"
+                        value={formData.guestIdentity}
+                        onChange={(e) => handleInputChange('guestIdentity', e.target.value)}
+                        className="rounded-none border-gray-200 focus:border-champagne focus:ring-champagne font-serif text-lg py-6"
+                        placeholder="Documento do acompanhante"
+                      />
+
+                      <p className="text-sm text-gray-500 font-serif font-bold">
+                        Necessário para autorização de entrada na portaria do Alphaville.
+                      </p>
+                    </div>
+
                   </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="guestIdentity" className="font-sans text-sm uppercase tracking-wider text-light-text">
-                      Número da Identidade do Acompanhante
-                    </Label>
-
-                    <Input
-                      id="guestIdentity"
-                      type="text"
-                      value={formData.guestIdentity}
-                      onChange={(e) => handleInputChange('guestIdentity', e.target.value)}
-                      className="rounded-none border-gray-200 focus:border-champagne focus:ring-champagne font-serif text-lg py-6"
-                      placeholder="Documento do acompanhante"
-                    />
-
-                    <p className="text-sm text-gray-500 font-serif">
-                      Necessário para autorização de entrada na portaria do Alphaville.
-                    </p>
-                  </div>
-
-                </div>
-              )}
+                )}
               </div>
             )}
 
