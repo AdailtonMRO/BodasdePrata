@@ -74,14 +74,14 @@ export function Hero() {
           </p>
 
           {/* Main Title */}
-          <h1 className="font-script text-5xl md:text-7xl lg:text-8xl text-dark-text mb-6 animate-fade-in opacity-0" style={{ animationDelay: '0.4s' }}>
+          <h1 className="font-script text-5xl md:text-7xl lg:text-8xl text-dark-text mb-2 animate-fade-in opacity-0" style={{ animationDelay: '0.4s' }}>
             <span className="font-nome text-[#646044]">Luana</span>
             <span className="text-champagne"> & </span>
             <span className="font-nome text-[#646044]">Adailton</span>
           </h1>
 
           {/* Description */}
-          <p className="font-serif text-3xl md:text-4xl text-light-text my-8 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
+          <p className="font-serif text-[28px] md:text-[34px] text-light-text mt-1 mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
             Convidam para a cerimônia de renovação de votos
           </p>
 
@@ -106,7 +106,7 @@ export function Hero() {
         {/* Scroll indicator */}
         <button
           onClick={scrollToContent}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-dark-text hover:text-verde transition-colors cursor-pointer animate-fade-in opacity-0"
+          className="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-dark-text hover:text-verde transition-colors cursor-pointer animate-fade-in opacity-0"
           style={{ animationDelay: '1s' }}
           aria-label="Rolar para conteúdo"
         >
