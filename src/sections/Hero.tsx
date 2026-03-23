@@ -81,7 +81,7 @@ export function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="font-serif text-2xl md:text-3xl text-light-text my-12 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
+          <p className="font-serif text-3xl md:text-4xl text-light-text my-8 animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
             Convidam para a cerimônia de renovação de votos
           </p>
 
@@ -97,7 +97,7 @@ export function Hero() {
           </div>
 
           {/* Quote */}
-          <p className="font-serif text-base md:text-lg text-light-text italic mt-8 max-w-xl animate-fade-in opacity-0" style={{ animationDelay: '0.8s' }}>
+          <p className="font-serif text-base md:text-lg text-light-text italic mt-2 max-w-xl animate-fade-in opacity-0" style={{ animationDelay: '0.8s' }}>
             "O amor não é apenas um sentimento, mas uma escolha diária"
           </p>
 
